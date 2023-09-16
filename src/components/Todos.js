@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from "./module.css";
+import "./module.css";
 
 const wrapper = {
   width: '100%',
@@ -11,12 +11,12 @@ const wrapper = {
   alignItems: 'center', 
 };
 
-const inputStyle = {
-  padding: '10px',
-  border: '1px solid #ccc',
-  borderRadius: '4px',
-  margin: '10px',
-};
+// const inputStyle = {
+//   padding: '10px',
+//   border: '1px solid #ccc',
+//   borderRadius: '4px',
+//   margin: '10px',
+// };
 
 const buttonStyle = {
   padding: '10px 20px',
@@ -28,14 +28,14 @@ const buttonStyle = {
 };
 
 function TodoItem({ todo, onToggle }) {
-  // 스타일 객체를 정의합니다.
+  // 스타일 객체를 정의
   const itemStyle = {
     textDecoration: todo.done ? 'line-through' : 'none',
   };
 
   return (
     <li
-      style={itemStyle} // 인라인 스타일을 적용합니다.
+      style={itemStyle} 
       onClick={() => onToggle(todo.id)}
     >
       {todo.text}
@@ -66,8 +66,8 @@ function Todos({ todos, onCreate, onToggle }) {
     <div style={wrapper}>
       <form onSubmit={onSubmit}>
         <input
-          style={inputStyle} 
-          // className={styles.input}
+          // style={inputStyle} 
+          className="input"
           value={text}
           placeholder="할 일을 입력하세요"
           onChange={onChange}
